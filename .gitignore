@@ -1,0 +1,7 @@
+.DS_Store
+.idea
+composer.phar
+phpunit.xml
+vendor/
+private.key
+public.key
