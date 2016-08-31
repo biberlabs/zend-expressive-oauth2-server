@@ -27,8 +27,11 @@ class AccessTokenRepository extends EntityRepository implements AccessTokenRepos
         /**
          * @var AccessTokenEntity $accessTokenEntity
          */
-        $user = $this->_em->getRepository(UserEntity::class)
-            ->findOneBy(['identifier' => $accessTokenEntity->getUserIdentifier()]);
+        $user = null;
+        if ($accessTokenEntity->getUserIdentifier()) {
+            $this->_em->getRepository(UserEntity::class)
+                ->findOneBy(['identifier' => $accessTokenEntity->getUserIdentifier()]);
+        }
 
         $scopes = [];
         foreach ($accessTokenEntity->getScopes() as $scope) {

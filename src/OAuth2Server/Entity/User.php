@@ -20,7 +20,6 @@ class User implements UserEntityInterface
 {
     use EntityTrait;
 
-
     /**
      * @var string
      * @ORM\Column(name="username", type="string", length=100)

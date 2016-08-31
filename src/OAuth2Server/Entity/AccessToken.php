@@ -10,7 +10,6 @@
 namespace OAuth2Server\Entity;
 
 use League\OAuth2\Server\Entities\AccessTokenEntityInterface;
-use League\OAuth2\Server\Entities\Traits\AccessTokenTrait;
 use Doctrine\ORM\Mapping as ORM;
 
 
