@@ -14,7 +14,7 @@
 
 ## Some Important Information
 
-For my opinion, Some part of the OAuth entity parts should be moved to redis or similar key value fast storage. Otherwise,
+For my opinion, Some of the OAuth entities should be moved to redis or similar key value fast storage. Otherwise,
 your API or application can be slower than your expectation. Please contact with [me](mailto:haydarkulekci@gmail.com).
 
 ## Requests
