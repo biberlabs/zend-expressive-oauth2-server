@@ -64,7 +64,7 @@ class ModuleConfig
                     'middleware' => [
                         \OAuth2Server\Action\AuthorizeAction::class,
                     ],
-                    'allowed_methods' => ['GET'],
+                    'allowed_methods' => ['GET', 'POST'],
                 ],
                 [
                     'name' => 'access_token',
