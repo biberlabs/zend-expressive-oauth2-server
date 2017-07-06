@@ -1,0 +1,281 @@
+{
+	"variables": [],
+	"info": {
+		"name": "PHPLeague Auth2 Server",
+		"_postman_id": "e78f2719-2841-d3f6-07e5-edb2bed17385",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Default Api Call",
+			"request": {
+				"url": "http://127.0.0.1:8080/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjZmNGZkZTFjZDUyMjU0ZGU0NWMxZjdmMjFkNDJmOTkzNWFmNzhjNTEzNjgyNTdjYzc3YTcyODAxODg4ZjRkMjgwNzk3MDcxMTlhZDBjMTFhIn0.eyJhdWQiOiJteWF3ZXNvbWVhcHAiLCJqdGkiOiI2ZjRmZGUxY2Q1MjI1NGRlNDVjMWY3ZjIxZDQyZjk5MzVhZjc4YzUxMzY4MjU3Y2M3N2E3MjgwMTg4OGY0ZDI4MDc5NzA3MTE5YWQwYzExYSIsImlhdCI6MTQ3MTU0MzI5MSwibmJmIjoxNDcxNTQzMjkxLCJleHAiOjE0NzE1NDY4OTEsInN1YiI6IjEiLCJzY29wZXMiOlsiYmFzaWMiLCJlbWFpbCJdfQ.FstRwMEjO-yyQsEOBA_pIBwb5dEzvynHUVr2H8UBTqskfGwAqAXE_BsU7RH-vl9TRPPFCT8naeSpRI00S_gMx5BABa95opI_l-lC5g7DdRo7mste3Xs92L0M4xd5l1umI1dPD6JhTOBdJdX4sQW6vDtvMTl0bv_lPBQJvS-JYAA",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "OAuth - Client Credential",
+			"request": {
+				"url": "http://127.0.0.1:8080/access_token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "1.0",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "client_id",
+							"value": "myawesomeapp",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "client_secret",
+							"value": "abc123",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "scope",
+							"value": "basic email",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "OAuth - Password",
+			"request": {
+				"url": "http://127.0.0.1:8080/access_token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "1.0",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "client_id",
+							"value": "myawesomeapp",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "client_secret",
+							"value": "whisky",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "scope",
+							"value": "basic email",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "username",
+							"value": "alex",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "whisky",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "OAuth - Refresh Token",
+			"request": {
+				"url": "http://127.0.0.1:8080/access_token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "1.0",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "refresh_token",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "client_id",
+							"value": "myawesomeapp",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "client_secret",
+							"value": "whisky",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "refresh_token",
+							"value": "EqsPiBfx04Vf3sDmvY08rvbmzAMiUDuW3vEIsHZPI6GGH2Rf/PagwswwtvDYc6WZuOTEcTtHEJCJTNJKyX3Qu0X1cNHOmG63MhqKBoLtJ8sMkernTH/n4BVbZQQgVTYeSFQ08AaQcUFE+j4aGTWzqcozzB4TSqfWdF5xwhqdPgpWGRAv7pHBAqdQdJP62S+eSV+5/S/P92eD0yIfQSIohMevThMfHAEZsQgB4gISBYRurMTITW53hvXXtg4sKtQBxstWQN80oVbpSK/j4kda4/okKnVvENG5OK2nVYmJWRUMSC6qZrACJ9yi49Abmq0rLego+BU3GCJkNJSNycQgQWOK7xJVkTLyyoQy8qYuNzPhBabOwKvZ0JJTLB5p5F/rHpsXU4H/ZFRDdLrGXVoiWX4XPOi/4zAsrEX3uzako49Yt1hg/3WtTdegjmxeIs8yNINmpGi6iaKdrbXhF3ihc466l3wCcRkjgogkBVoHHHMFKLRoqOU7nw31gAOu1xbp",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "OAuth - Authorization Code",
+			"request": {
+				"url": "http://127.0.0.1:8080/access_token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "1.0",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "client_id",
+							"value": "myawesomeapp",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "code",
+							"value": "kMzKhImeKgE5lUkhUu7nTNhWf4KkOgUX4iCE9UcxJHImWs+SduCdry3BNSY/s4426Dx+Yis6tkFjO0gu69JTi6jvlUN70SW4e1ZrCfoMoP4Hus1fllEK0MidXN7bFQppybHOXTaGte762TIy9gg3wYqgOTDy9qfuLCtje/nrOh6mXQSW7JRst3HQepe5DjeXqgp9iAgz5bIURIvCbHtCJaUW3Kj97lO8/mWZbTLvpb0Wpvt6ib5o+DnK3K0HUzo40K5Q4GlDHY1V5fIvBzWtS0PuI/XPSGCJworHzoVv7kuLXe780NUwxjjJfDk6kFzWzIJtBRUSp+YvyCCA+vFJ1zrOqUfEckSYgIKlgmWbBIm2oFhLLHsjqz9qd2WiKkwi3yd6K+eHCCY3FoPUUgyS/5dh/i+Wz2Va+EEJfGTpDH7LAf/6oQlqWEnvQSPwTL/xsvcJW9xvlK/f8op1hISWaDFVZVfewVnGvuKky4hnsjrvbwMj7S1UUVKY07LDnmf1",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "OAuth - Authorization",
+			"request": {
+				"url": "http://127.0.0.1:8080/authorize?response_type=code&client_id=myawesomeapp",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					},
+					{
+						"key": "Accept",
+						"value": "1.0",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "authorization_code",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "client_id",
+							"value": "myawesomeapp",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "code",
+							"value": "123123123",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
